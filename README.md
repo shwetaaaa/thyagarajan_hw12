@@ -1,87 +1,56 @@
-# Belly Button Biodiversity
+# Unit 14 | Assignment - JavaScript and DOM Manipulation
 
-![Bacteria by filterforge.com](Images/bacteria_by_filterforgedotcom.jpg)
+## Background
 
-In this assignment, you will build an interactive dashboard to explore the [Belly Button Biodiversity DataSet](http://robdunnlab.com/projects/belly-button-biodiversity/).
+WAKE UP SHEEPLE! The extra-terrestrial menace has come to Earth and we here at `ALIENS-R-REAL` have collected all of the eye-witness reports we could to prove it! All we need to do now is put this information online for the world to see and then the matter will finally be put to rest.
 
-## Step 1 - Plotly.js
+There is just one tiny problem though... our collection is too large to search through manually. Even our most dedicated followers are complaining that they are having trouble locating specific reports in this mess.
 
-Use Plotly.js to build interactive charts for your dashboard.
+That's why we are hiring you. We need you to write code that will create a table dynamically based upon a [dataset we provide](StarterCode/static/js/data.js). We also need to allow our users to filter the table data for specific values. There's a catch though... we only use pure JavaScript, HTML, and CSS, and D3.js on our web pages. They are the only coding languages which can be trusted.
 
-* Create a PIE chart that uses data from your samples route (`/samples/<sample>`) to display the top 10 samples.
+You can handle this... right? The planet Earth needs to know what we have found!
 
-  * Use `sample_values` as the values for the PIE chart
+## Your Task
 
-  * Use `otu_ids` as the labels for the pie chart
+### Level 1: Automatic Table and Date Search
 
-  * Use `otu_labels` as the hovertext for the chart
+* Create a basic HTML web page or use the [index.html](StarterCode/index.html) file provided (we recommend building your own custom page!).
 
-  ![PIE Chart](Images/pie_chart.png)
+* Using the UFO dataset provided in the form of an array of JavaScript objects, write code that appends a table to your web page and then adds new rows of data for each UFO sighting.
 
-* Create a Bubble Chart that uses data from your samples route (`/samples/<sample>`) to display each sample.
+  * Make sure you have a column for `date/time`, `city`, `state`, `country`, `shape`, and `comment` at the very least.
 
-  * Use `otu_ids` for the x values
+* Use a date form in your HTML document and write JavaScript code that will listen for events and search through the `date/time` column to find rows that match user input.
 
-  * Use `sample_values` for the y values
+### Level 2: Multiple Search Categories (Optional)
 
-  * Use `sample_values` for the marker size
+* Complete all of Level 1 criteria.
 
-  * Use `otu_ids` for the marker colors
+* Using multiple `input` tags and/or select dropdowns, write JavaScript code so the user can to set multiple filters and search for UFO sightings using the following criteria based on the table columns:
 
-  * Use `otu_labels` for the text values
-
-  ![Bubble Chart](Images/bubble_chart.png)
-
-* Display the sample metadata from the route `/metadata/<sample>`
-
-  * Display each key/value pair from the metadata JSON object somewhere on the page
-
-* Update all of the plots any time that a new sample is selected.
-
-* You are welcome to create any layout that you would like for your dashboard. An example dashboard page might look something like the following.
-
-![Example Dashboard Page](Images/dashboard_part1.png)
-![Example Dashboard Page](Images/dashboard_part2.png)
-
-## Step 2 - Heroku
-
-Deploy your Flask app to Heroku.
-
-* You can use the provided sqlite file for the database.
-
-* Ask your Instructor and TAs for help!
+  1. `date/time`
+  2. `city`
+  3. `state`
+  4. `country`
+  5. `shape`
 
 - - -
 
-## Advanced Challenge Assignment (Optional)
+### Dataset
 
-The following task is completely optional and is very advanced.
+* [UFO Sightings Data](StarterCode/static/js/data.js)
 
-* Adapt the Gauge Chart from <https://plot.ly/javascript/gauge-charts/> to plot the Weekly Washing Frequency obtained from the route `/wfreq/<sample>`
+### Assessment
 
-* You will need to modify the example gauge code to account for values ranging from 0 - 9.
+Your final product will be assessed on the following metrics:
 
-* Update the chart whenever a new sample is selected
+* Completion of all steps in chosen level
 
-![Weekly Washing Frequency Gauge](Images/gauge.png)
+* Visual attraction
 
-- - -
+* Usability
 
-## Flask API
-
-Use Flask API starter code to serve the data needed for your plots.
-
-* Test your routes by visiting each one in the browser.
-
-- - -
-
-## Hints
-
-* Don't forget to `pip install -r requirements.txt` before you start your server.
-
-* Use `console.log` inside of your JavaScript code to see what your data looks like at each step.
-
-* Refer to the [Plotly.js Documentation](https://plot.ly/javascript/) when building the plots.
+**Good luck!**
 
 - - -
 
