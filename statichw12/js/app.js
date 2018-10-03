@@ -19,7 +19,7 @@ filteredSightings.forEach(function(sighting) {
 
 
 // Select the submit button
-var datetimeSubmitButton = d3.select("#filterDatetime");
+var datetimeSubmitButton = d3.select("#filter-btn");
 var citySubmitButton = d3.select("#filterCity");
 var stateSubmitButton = d3.select("#filterState");
 var countrySubmitButton = d3.select("#filterCountry");
@@ -43,7 +43,7 @@ datetimeSubmitButton.on("click", function() {
   // }
   d3.select("tbody").html("");
   // Select the input value from the input element and get the raw HTML node
-  var inputValue = d3.select("#datetimeInput").node().value;
+  var inputValue = d3.select("#datetime").node().value;
   
   // test the value of 
   console.log(inputValue);
